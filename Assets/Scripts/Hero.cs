@@ -21,7 +21,7 @@ public class Hero : MonoBehaviour
         float vAxis= Input.GetAxis("Vertical");
         float dirX = (hAxis != 0)? Mathf.Sign(hAxis)*1:0;
         float dirZ= (vAxis != 0)? Mathf.Sign(vAxis)*1:0;
-        if (Time.time > lastMovement + 1) {
+        if (Time.time > lastMovement + .5) {
             lastMovement = Time.time;
             transform.Translate(new Vector3(dirX, 0, dirZ) * speed);
         }
